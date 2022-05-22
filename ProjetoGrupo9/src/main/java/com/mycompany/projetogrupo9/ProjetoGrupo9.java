@@ -6,6 +6,8 @@ public class ProjetoGrupo9 {
 
     private static String persona;
     private static String jogador;
+    private static int vidas;
+    
     
     
 
@@ -13,6 +15,7 @@ public class ProjetoGrupo9 {
         Scanner input = new Scanner(System.in);
         int menuJogo;
         int escolha;
+	String[] vetor = {"Voce matou o inimigo","Voce morreu"};
         System.out.println("\nSeja bem-vindo");
         System.out.println("-------------Return of the hero: The Dragons Death-------------");
 
@@ -64,6 +67,7 @@ public class ProjetoGrupo9 {
 
         do {
             int opção_porta1;
+	    int atak;
             
             
             System.out.println("O chão começa a tremer e você cai em uma sala parecida com um hall.");
@@ -71,34 +75,70 @@ public class ProjetoGrupo9 {
             System.out.println("Você olha em volta e vê uma estrutura parecida com a de um castelo");
             System.out.println("Depois de olhar a sala por completo, se depara com dois caminhos.");
             System.out.println("O medo existe em você, mas com coragem você decide escolher um caminho.");
-            System.out.println();
+            pressEnter();
             System.out.println("Qual caminho você deseja escolher? ");
             System.out.println("1- Caminho da esquerda");
             System.out.println("2- Caminho da direita");
             opção_porta1 = input.nextInt(); 
-            
-            switch  (opção_porta1){
-                case 1:
-                    //caminho da esqueda
-                    do {
-                        System.out.println("Ao entrar na sala você se depara com algo escuro, que se encontra imóvel.");
+            if(opção_porta1 == 1){
+		System.out.println("Ao entrar na sala você se depara com algo escuro, que se encontra imóvel.");
                         System.out.println("Você olha um pouco mais de perto e parece ser uma criatura.");
                         System.out.println("Você vê a criatura e ela aparenta estar adormecida.");
                         System.out.println("(alma) Herói, o que faremos? ");
+			
                         System.out.println("1 - Ataque com a espada:");
                         System.out.println("2 - Ataque com fogo:");
                         System.out.println("3 - Feitiço imobilizador:");
                         System.out.println("4 - Tentar passar pela sala sem acorda-la");
-                        opção_porta1 = input.nextInt();
+                          
+			
+                        do {
+		    vida();
+		    opção_porta1 = input.nextInt();
+                    //caminho da esqueda
+                        switch (opção_porta1){
+                            case 2:
+				    if(opção_porta1==2){
+				    
+				    System.out.println("\n"+vetor[0]);
+				    System.out.println("O ambiente se encontrava lotado de teias, com isso tudo se queima e o ataque é super efetivo.");
+				    System.out.println("A aranha tenta revidar mesmo em chamas, mas já afetada pelo ataque, você devia e desfere o golpe final com a sua espada.");
+				     System.out.println("Com isso você passa pela sala em chamas e chega a um novo sagoão.");
+				    }break;
+			    case 1:
+			    case 3:
+			    case 4:
+				    System.out.println("\n" + persona + ": " + escolha);
+				    System.out.println("\n"+vetor[1]);
+				    System.out.println("O ataque atinge a criatura, quando ela se levanta é notável que trata-se de uma aranha.");
+				    System.out.println("Ela te ataca e com isso voce perde uma vida");
+				    
+                            vidas = vidas - 1;
+                            gameOver();
+			    break;
+			    default:
+                          System.out.println("\nResposta inválida, tente novamente!");
+	    }
+			if(opção_porta1 == 2){
+                                    
+                                    
+                                    
+                                   
+		    
+	    }
+                    
                         
+                        do {
+		    vida();
+		    escolha = input.nextInt();
+            switch  (opção_porta1){
+                case 1:
+                    //caminho da esqueda
                         switch (opção_porta1){
                             case 1:
-                                if (opção_porta1 == 1) {
-                                    System.out.println("O ataque atinge a criatura, quando ela se levanta é notável que trata-se de uma aranha.");
-                                    System.out.println("O ambiente se encontrava lotado de teias, com isso tudo se queima e o ataque é super efetivo.");
-                                    System.out.println("A aranha tenta revidar mesmo em chamas, mas já afetada pelo ataque, você devia e desfere o golpe final com a sua espada.");
-                                    System.out.println();
-                                    System.out.println("Com isso você passa pela sala em chamas e chega a um novo sagoão.");
+				    
+				    
+                                
                                     
                                 }
                                 
@@ -115,12 +155,12 @@ public class ProjetoGrupo9 {
                     
                     
             
-                case 2:
+                
                     //demonio esqueleto
                     
                    
                     
-            }
+            
             
             
             
@@ -146,6 +186,9 @@ public class ProjetoGrupo9 {
         
 
     }
+	}while(true);
+	}
+
 
     public static int menuPrincipal(Scanner input) {
         int menuInicial;
@@ -304,4 +347,27 @@ public class ProjetoGrupo9 {
         return 0;
 
     }
+    public static void vida(){
+    
+    for(int i=0;i<vidas;i++){
+      String coracao = "s2";
+      System.out.print(coracao);
+    }
+    System.out.print("\n");
+  }
+
+  public static void gameOver(){
+    if(vidas<=0){
+      System.out.println("\nGAME OVER!\n");
+      System.out.println("Você perdeu todas as suas vidas!\n");
+      System.out.println("Até a proxima");
+      System.exit(0);
+    }
+  }
+    public static void pressEnter(){
+    Scanner input = new Scanner(System.in);
+    System.out.print("(press ENTER)\n");
+
+    input.nextLine();
+  }
 }
