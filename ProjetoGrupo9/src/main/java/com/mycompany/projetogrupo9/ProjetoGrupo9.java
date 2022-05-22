@@ -7,15 +7,12 @@ public class ProjetoGrupo9 {
     private static String persona;
     private static String jogador;
     private static int vidas;
-    
-    
-    
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int menuJogo;
         int escolha;
-	String[] vetor = {"Voce matou o inimigo","Voce morreu"};
+        String[] vetor = {"Voce matou o inimigo", "Voce morreu"};
         System.out.println("\nSeja bem-vindo");
         System.out.println("-------------Return of the hero: The Dragons Death-------------");
 
@@ -67,9 +64,8 @@ public class ProjetoGrupo9 {
 
         do {
             int opção_porta1;
-	    int atak;
-            
-            
+            int atak;
+
             System.out.println("O chão começa a tremer e você cai em uma sala parecida com um hall.");
             System.out.println("Você se sente tonto com a queda e com a visão turva.");
             System.out.println("Você olha em volta e vê uma estrutura parecida com a de um castelo");
@@ -79,116 +75,129 @@ public class ProjetoGrupo9 {
             System.out.println("Qual caminho você deseja escolher? ");
             System.out.println("1- Caminho da esquerda");
             System.out.println("2- Caminho da direita");
-            opção_porta1 = input.nextInt(); 
-            if(opção_porta1 == 1){
-		System.out.println("Ao entrar na sala você se depara com algo escuro, que se encontra imóvel.");
-                        System.out.println("Você olha um pouco mais de perto e parece ser uma criatura.");
-                        System.out.println("Você vê a criatura e ela aparenta estar adormecida.");
-                        System.out.println("(alma) Herói, o que faremos? ");
-			
-                        System.out.println("1 - Ataque com a espada:");
-                        System.out.println("2 - Ataque com fogo:");
-                        System.out.println("3 - Feitiço imobilizador:");
-                        System.out.println("4 - Tentar passar pela sala sem acorda-la");
-                          
-			
-                        do {
-		    vida();
-		    opção_porta1 = input.nextInt();
-                    //caminho da esqueda
-                        switch (opção_porta1){
-                            case 2:
-				    if(opção_porta1==2){
-				    
-				    System.out.println("\n"+vetor[0]);
-				    System.out.println("O ambiente se encontrava lotado de teias, com isso tudo se queima e o ataque é super efetivo.");
-				    System.out.println("A aranha tenta revidar mesmo em chamas, mas já afetada pelo ataque, você devia e desfere o golpe final com a sua espada.");
-				     System.out.println("Com isso você passa pela sala em chamas e chega a um novo sagoão.");
-				    }break;
-			    case 1:
-			    case 3:
-			    case 4:
-				    System.out.println("\n" + persona + ": " + escolha);
-				    System.out.println("\n"+vetor[1]);
-				    System.out.println("O ataque atinge a criatura, quando ela se levanta é notável que trata-se de uma aranha.");
-				    System.out.println("Ela te ataca e com isso voce perde uma vida");
-				    
+            opção_porta1 = input.nextInt();
+            if (opção_porta1 == 1) {
+                System.out.println("Ao entrar na sala você se depara com algo escuro, que se encontra imóvel.");
+                System.out.println("Você olha um pouco mais de perto e parece ser uma criatura.");
+                System.out.println("Você vê a criatura e ela aparenta estar adormecida.");
+                System.out.println("(alma) Herói, o que faremos? ");
+
+                System.out.println("1 - Ataque com a espada:");
+                System.out.println("2 - Ataque com fogo:");
+                System.out.println("3 - Feitiço imobilizador:");
+                System.out.println("4 - Tentar passar pela sala sem acorda-la");
+
+                do {
+                    vida();
+                    opção_porta1 = input.nextInt();
+                    //caminho da esquerda
+                    switch (opção_porta1) {
+                        case 2:
+                            if (opção_porta1 == 2) {
+
+                                System.out.println("\n" + vetor[0]);
+                                System.out.println("O ambiente se encontrava lotado de teias, com isso tudo se queima e o ataque é super efetivo.");
+                                System.out.println("A aranha tenta revidar mesmo em chamas, mas já afetada pelo ataque, você devia e desfere o golpe final com a sua espada.");
+                                System.out.println("Com isso você passa pela sala em chamas e chega a um novo sagoão.");
+                            }
+                            break;
+                        case 1:
+                        case 3:
+                        case 4:
+                            System.out.println("\n" + persona + ": " + escolha);
+                            System.out.println("\n" + vetor[1]);
+                            System.out.println("O ataque atinge a criatura, quando ela se levanta é notável que trata-se de uma aranha.");
+                            System.out.println("Ela te ataca e com isso voce perde uma vida");
+
                             vidas = vidas - 1;
                             gameOver();
-			    break;
-			    default:
-                          System.out.println("\nResposta inválida, tente novamente!");
-	    }
-			if(opção_porta1 == 2){
-                                    
-                                    
-                                    
-                                   
-		    
-	    }
-                    
-                        
-                        do {
-		    vida();
-		    escolha = input.nextInt();
-            switch  (opção_porta1){
-                case 1:
-                    //caminho da esqueda
-                        switch (opção_porta1){
-                            case 1:
-				    
-				    
-                                
-                                    
-                                }
-                                
-                        }
-			break;
-                            
-                        
-                         
-                         
-                        
-                        
-                    } while (true);
-                    
-                    
-                    
-            
-                
-                    //demonio esqueleto
-                    
-                   
-                    
-            
-            
-            
-            
-            
-            
-           
-            
-            
-            
-            
-            
-            
-            
-                  
-            
-            
-            
-            
-            
-            
+                            break;
+                        default:
+                            System.out.println("\nResposta inválida, tente novamente!");
+                    }
+                } while (true);
+            } else if (opção_porta1 == 2) {
+                System.out.println("\n" + vetor[0]);
+                System.out.println("Você escolhe o caminho da direita...");
+                System.out.println("Você segue pelo corredor e nota não ver o final dele, será algo da sua cabeça? ");
+                System.out.println("A energia do local é pesada e você sente já estar andando horas em linha reta...");
+                System.out.println("Você vai perdendo a noção do tempo que está andando, pensa em voltar mas quando olha para trás já não consegue identificar a saída.");
+                System.out.println("Com isso, você já não sabe mais qual a direção correta e está completamente perdido.");
+                System.out.println("Você decide caminhar na mesma direção em que já estava, em algum lugar você iria chegar...");
+                System.out.println("Você avista uma porta enorme, uma cruz invertida na porta e uma cesta de morangos, também havia água...");
+                System.out.println("Você decide entrar na sala...");
+                System.out.println();
+                System.out.println("Ao entrar na sala uma adaga é lançada sobre você, mas com seus reflexos apurados você desvia e a adaga fica presa na porta");
+                System.out.println("Quem te ataca é um esqueleto demoniáco, um rei antigo que foi corronpido com riqueza e poder, concedidos pelo demônio.");
+                System.out.println("Ele veste uma armadura dourada e uma coroa de espinhos folheados a ouro.");
+                System.out.println("(O esqueleto diz) Meu jovem, vejo sua determinação, creio que possamos fazer um trato amigável!");
+                System.out.println("(O esqueleto diz) Aquela cesta de morangos e água na entrada representa o poder do nosso senhor, depois de um longo caminho sempre existe a recompensa!");
+                System.out.println("(O esqueleto diz) Mas caso o contrário, roubarei sua vida e você acabará em ruina, junto com as outras almas tomadas pelo nosso senhor.");
+                System.out.println();
+                System.out.println("(alma) Herói, precisamos de você!");
+                System.out.println("(alma) Não se deixe enganar, o que faremos?");
+                System.out.println("1) Aceitar o trato");
+                System.out.println("2) Retirar a adaga presa na parede, imbuir um feitiço de exorção e arremesar de volta");
+                System.out.println("3) Arremesar uma bola de fogo");
+                System.out.println("4) Desembainhar sua espada e partir para o combate");
+
+                do {
+                    vida();
+                    opção_porta1 = input.nextInt();
+
+                    switch (opção_porta1) {
+                        case 1:
+                            if (opção_porta1 == 1) {
+                                System.out.println("Ao aceitar o trato, você acaba se tornando um carrasco a mando do senhor dos demônios.");
+                                System.out.println("Você dizima até o último habitante da ilha.");
+                                vidas = vidas - 1;
+                                gameOver();
+                                break;
+
+                            }
+                        case 2:
+                            if (opção_porta1 == 2) {
+                                System.out.println("Você arremessa a adaga com um feitiço de exorção.");
+                                System.out.println("O esqueleto utilizava um feitiço de controle sobre ela, ela faz a volta e atinge seu pescoço.");
+                                System.out.println("Você morreu.");
+                                vidas = vidas - 1;
+                                gameOver();
+                                break;
+
+                            }
+                        case 3:
+                            if (opção_porta1 == 3) {
+                                System.out.println("Você arremessa uma bola de fogo.");
+                                System.out.println("O esqueleto é atingido.");
+                                System.out.println("O esqueleto já morreu anteriormente, portanto não pode morrer!");
+                                System.out.println("Ele contra ataca com as mãos no seu pescoço e te sufoca até a morte.");
+                                System.out.println("Você morreu!");
+                                vidas = vidas - 1;
+                                gameOver();
+                                break;
+
+                            }
+                        case 4:
+                            if (opção_porta1 == 4) {
+
+                                System.out.println("\n" + vetor[0]);
+                                System.out.println("Você ataca o esqueleto com uma série de ataques.");
+                                System.out.println("Ele é ótimo com espadas e defende todos.");
+                                System.out.println("Com um chute nas pernas você arranca uma delas.");
+                                System.out.println("Quando ele desequilibra, você desfere uma série de mil golpes, o cortando em mil pedaços.");
+                                System.out.println("Você vence o combate!");
+                                break;
+
+                            }
+
+                    }
+
+                } while (true);
+
+            }
 
         } while (true);
-        
-
     }
-	}while(true);
-	}
-
 
     public static int menuPrincipal(Scanner input) {
         int menuInicial;
@@ -347,27 +356,29 @@ public class ProjetoGrupo9 {
         return 0;
 
     }
-    public static void vida(){
-    
-    for(int i=0;i<vidas;i++){
-      String coracao = "s2";
-      System.out.print(coracao);
-    }
-    System.out.print("\n");
-  }
 
-  public static void gameOver(){
-    if(vidas<=0){
-      System.out.println("\nGAME OVER!\n");
-      System.out.println("Você perdeu todas as suas vidas!\n");
-      System.out.println("Até a proxima");
-      System.exit(0);
-    }
-  }
-    public static void pressEnter(){
-    Scanner input = new Scanner(System.in);
-    System.out.print("(press ENTER)\n");
+    public static void vida() {
 
-    input.nextLine();
-  }
+        for (int i = 0; i < vidas; i++) {
+            String coracao = "s2";
+            System.out.print(coracao);
+        }
+        System.out.print("\n");
+    }
+
+    public static void gameOver() {
+        if (vidas <= 0) {
+            System.out.println("\nGAME OVER!\n");
+            System.out.println("Você perdeu todas as suas vidas!\n");
+            System.out.println("Até a proxima");
+            System.exit(0);
+        }
+    }
+
+    public static void pressEnter() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("(press ENTER)\n");
+
+        input.nextLine();
+    }
 }
