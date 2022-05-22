@@ -78,7 +78,7 @@ public class ProjetoGrupo9 {
             opção_porta1 = input.nextInt(); 
             
             switch  (opção_porta1){
-                case "1":
+                case 1:
                     //caminho da esqueda
                     do {
                         System.out.println("Ao entrar na sala você se depara com algo escuro, que se encontra imóvel.");
@@ -92,7 +92,7 @@ public class ProjetoGrupo9 {
                         opção_porta1 = input.nextInt();
                         
                         switch (opção_porta1){
-                            case "1":
+                            case 1:
                                 if (opção_porta1 == 1) {
                                     System.out.println("O ataque atinge a criatura, quando ela se levanta é notável que trata-se de uma aranha.");
                                     System.out.println("O ambiente se encontrava lotado de teias, com isso tudo se queima e o ataque é super efetivo.");
@@ -103,6 +103,7 @@ public class ProjetoGrupo9 {
                                 }
                                 
                         }
+			break;
                             
                         
                          
@@ -110,7 +111,7 @@ public class ProjetoGrupo9 {
                         
                         
                     } while (true);
-                    break;
+                    
                     
                     
             
@@ -142,7 +143,7 @@ public class ProjetoGrupo9 {
             
 
         } while (true);
-        break;
+        
 
     }
 
