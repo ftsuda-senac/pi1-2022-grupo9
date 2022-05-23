@@ -187,37 +187,35 @@ public class ProjetoGrupo9 {
                                     System.out.println("\n" + vetor[0]);
                                     System.out.println("Você ataca o esqueleto com uma série de ataques.\n Ele é ótimo com espadas e defende todos.\n Com um chute nas pernas você arranca uma delas.\nQuando ele desequilibra, você desfere uma série de mil golpes, o cortando em mil pedaços.\n");
                                     break;
+				    
 
                                 }
+				default:
+                                System.out.println("\nResposta inválida, tente novamente!");
 
                         }
 
                     } while (true);
+		    
 
-                }
-            } while (false);
-
-            //Heron 
-            //Italo 
-            do {
-                vidas = 3;
-                int opção_porta1;
-                int atak;
-                // italo que mecheu abaixo, se tiver errado tenho o codico antigo....
-                System.out.println("Ao entra na sala, você se depara com um grande corredor repleto de esqueletos de antigos guerreiros.");
+                }else if (escolha == 3){
+			System.out.println("Ao entra na sala, você se depara com um grande corredor repleto de esqueletos de antigos guerreiros.");
                 System.out.println("Ao seguir em frente você se escutar um suspiro");
                 System.out.println("e de um guerreiro paladino que se encontra a beira da morte!");
                 System.out.println("ao te ver o guerreiro grita e Peder para você se aproximar");
                 System.out.println("quando você se aproxima o paladino diz");
                 System.out.println("- Guerreiro paladino - Diz suas últimas palavras- Por favor no meu último momento de vida");
+		pressEnter();
                 System.out.println("te peço Mate o Rei Dragão que se encontra a frente, ele o responsável por trazer todos o mau para nossa querida terra natal.");
                 System.out.println("te entregou meu querido escudo para você enfrentar o Demônio...");
                 System.out.println("após das suas últimas palavras, o Guerreiro paladino vem a falecer......");
                 System.out.println("Ao seguir em frente depois de horas de caminha sobre ossos de antigos Gueiros que tentaram derrotar o maligno Rei Dragão");
+		pressEnter();
                 System.out.println(" Der repente você avista o Infame Rei Dragão que matou o Paladino que você encontrou no meio do caminho e o responsável por sugar toda energia vital da população da ilha.");
                 System.out.println("ao te ver o Rei Dragão vem correndo na sua direção com sede de sangue e fome de carne humana.");
                 System.out.println("Fugir não é uma opção!!! Você tem que atacar para sobreviver e vingar o paladino");
                 System.out.println("Rápido Escolha seu ataque com cuidado, se não escolher com rapidez você morrera.");
+		pressEnter();
                 System.out.println("com sabedoria porque essa decisão pode ser fatal:");
                 System.out.println("1 - Ataque com a espada + Escudo Paladino");
                 System.out.println("2 - Feitiço imobilizador");
@@ -227,20 +225,27 @@ public class ProjetoGrupo9 {
                 System.out.println("7 - Fúria Motal");
                 System.out.println("8 - Dragão Flamejante");
                 System.out.println("9 - Lâmina Mortal");
-                vida();
-                opção_porta1 = input.nextInt();
-                //caminho da esquerda
-                switch (opção_porta1) {
+                
+                //caminho do meio
+		do{
+			vida();
+		
+                escolha = input.nextInt();
+                switch (escolha) {
+			
+			
                     case 1:
-                        if (opção_porta1 == 1) {
+                        if (escolha == 1) {
 
-                            System.out.println("\n" + vetor[0]);
+                            
                             System.out.println(" ");
                             System.out.println("Ao te atacar você conseguiu bloquear o ataque do demônio com o escudo do paladino");
                             System.out.println("contra tacando com sua espada você, furo o seu coração matando o infame Demônio.");
                             System.out.println("Parabéns, você conseguiu!!!!");
-                            System.out.println("Derem pente aparecer o espírito do paladino na sua frente sorrindo e agradecendo");
+                            System.out.println("Derrente aparecer o espírito do paladino na sua frente sorrindo e agradecendo");
                             System.out.println("pela sua vingança...");
+			    
+                                System.out.println("\n" + vetor[0]);
 
                         }
                         break;
@@ -252,56 +257,59 @@ public class ProjetoGrupo9 {
                             gameOver();
                             System.out.println("você lançou um feitiço no dragão.... mas não teve efeito no dragão " + vidas + " vidas.\n");
                             System.out.println("Ele atacaou com todas a s suas forças e te matou...");
+			    
                             break;
                         }
                     case 3:
                         if (escolha == 3) {
 
-                            System.out.println("\n" + vetor[1]);
-                            vidas = vidas - 1;
-                            gameOver();
+                            
                             System.out.println("O Rei Dragão e imuner a qual quer ataque de fogo.. " + vidas + " vidas.\n");
                             System.out.println("Ele atacaou com todas a s suas forças e te matou...");
+			    System.out.println("\n" + vetor[1]);
+                            vidas = vidas - 1;
+                            gameOver();
                             break;
                         }
                     case 4:
                         if (escolha == 4) {
-                            System.out.println("\n" + vetor[1]);
+                            
+                            System.out.println("infelizmente seu escudo nao suportou o ataque.");
+                            
+			    System.out.println("\n" + vetor[1]);
                             vidas = vidas - 1;
                             gameOver();
-                            System.out.println("infelizmente seu escudo nao suportou o ataque.");
-                            System.out.println("GAMEOVER");
                             break;
                         }
                     case 5:
                         if (escolha == 5) {
-                            System.out.println("\n" + vetor[1]);
-                            vidas = vidas - 1;
-                            gameOver();
+                            
                             System.out.println("O guerreiro realiza o feitiço das sombras, deixando o ambiente ainda mais sombrio , numa tentativa desesperada de se esconder.");
                             System.out.println("O guerreiro se esqueceu que o rei vive nas sombras da escuridão, tendo assim , facilidade para se locomover nas sombras");
                             System.out.println("Em uma tentativa frustada de se esconder , o rei e o guerreiro ficam cara a cara.");
                             System.out.println("O guerreiro, com a sua visão prejudicada , recebe uma bola de fogo conjurada pelo rei demônio");
+			    System.out.println("\n" + vetor[1]);
+                            vidas = vidas - 1;
+                            gameOver();
                             break;
 
                         }
                     case 6:
                         if (escolha == 6) {
-                            System.out.println("\n" + vetor[1]);
-                            vidas = vidas - 1;
-                            gameOver();
+                            ;
                             System.out.println("O guerreiro já estava exausto e decide desferir seu último ataque , usando toda sua força e vitalidade.");
                             System.out.println("O guerreiro então corre em direção ao seu inimigo");
                             System.out.println("Para sua surpresa, ele acerta o golpe, mas a armadura do rei era resistente, o inimigo apenas bambeou.");
                             System.out.println("A luta foi árdua, porém, ao utilizar o restante de sua força, o guerreiro desaba , se tornando assim um oponente vulnerável para o rei");
                             System.out.println("O ardiloso rei demônio pisa sobre o corpo do guerreiro e desfere com sua espada um golpe fatal no coraçao do guerreiro");
+			    System.out.println("\n" + vetor[1]);
+                            vidas = vidas - 1;
+                            gameOver();
                             break;
                         }
                     case 7:
                         if (escolha == 7) {
-                            System.out.println("\n" + vetor[1]);
-                            vidas = vidas - 1;
-                            gameOver();
+                            
                             System.out.println("Após anos de treinamento e estudos , o guerreiro adquiri incríveis poderes mágicos .");
                             System.out.println("O guerreiro que ansiava pela luta, ao avistar seu inimigo , declara :");
                             System.out.println("- Você está morto , hoje irei honrar todos aqueles que depositaram sua esperança em minhas mãos !");
@@ -311,6 +319,9 @@ public class ProjetoGrupo9 {
                             System.out.println("Para sua surpresa, o rei então se transforma na temida criatura , o rei dragão , absorvendo todo aquele poder lançado pelo guerreiro, tendo em vista que o poder utilizava o elemento fogo como principal elemento");
                             System.out.println("O contra ataque foi certeiro, o dragão absorveu toda aquela energia lançada e cuspiu a mesma contra o guerreiro");
                             System.out.println("O corajoso guerreiro havia foi atingido pelo seu próprio feitiço e não resistiu");
+			    System.out.println("\n" + vetor[1]);
+                            vidas = vidas - 1;
+                            gameOver();
                             break;
                         }
                     case 8:
@@ -336,15 +347,18 @@ public class ProjetoGrupo9 {
                         }
                     default:
                         System.out.println("\nResposta inválida, tente novamente!");
+			    
+			    }
+		}while(true);
+            } 
+	    }while (true);
 
-                    //heron
-                    //italo
-                }
-
-            } while (escolha < 1);
+            //Heron 
+            //Italo 
             
             
-        } while (escolha < 1);
+            
+        } while (true);
 
     }
 
