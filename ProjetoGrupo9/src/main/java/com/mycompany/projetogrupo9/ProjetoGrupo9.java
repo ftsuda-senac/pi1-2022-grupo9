@@ -69,6 +69,7 @@ public class ProjetoGrupo9 {
                 System.out.println("Qual caminho você deseja escolher? ");
                 System.out.println("1- Caminho da esquerda");
                 System.out.println("2- Caminho da direita");
+                System.out.println("3- Caminho do meio");
                 escolha = input.nextInt();
                 if (escolha == 1) {
                     System.out.println("Ao entrar na sala você se depara com algo escuro, que se encontra imóvel.");
@@ -194,7 +195,6 @@ public class ProjetoGrupo9 {
                     } while (true);
 
                 }
-
             } while (false);
 
             //Heron 
@@ -340,9 +340,11 @@ public class ProjetoGrupo9 {
                     //heron
                     //italo
                 }
-                while (true);
-            } while (true);
-        } while (true);
+
+            } while (escolha < 1);
+            
+            
+        } while (escolha < 1);
 
     }
 
