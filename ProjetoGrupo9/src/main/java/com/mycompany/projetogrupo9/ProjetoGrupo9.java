@@ -219,14 +219,14 @@ public class ProjetoGrupo9 {
                 System.out.println("Fugir não é uma opção!!! Você tem que atacar para sobreviver e vingar o paladino");
                 System.out.println("Rápido Escolha seu ataque com cuidado, se não escolher com rapidez você morrera.");
                 System.out.println("com sabedoria porque essa decisão pode ser fatal:");
-                System.out.println("1 - Feitiço imobilizador");
-                System.out.println("2 - Arremesar uma bola de fogo");
-                System.out.println("3 - Ataque com a espada + Escudo Paladino");
+                System.out.println("1 - Ataque com a espada + Escudo Paladino");
+                System.out.println("2 - Feitiço imobilizador");
+                System.out.println("3 - Arremesar uma bola de fogo");
                 System.out.println("4 - Defender o Ataque do dragão");
-                System.out.println("6- Feitiço das Sombras");
-                System.out.println("7- Fúria Motal");
-                System.out.println("8- Dragão Flamejante");
-                System.out.println("9- Lâmina Mortal");
+                System.out.println("6 - Feitiço das Sombras");
+                System.out.println("7 - Fúria Motal");
+                System.out.println("8 - Dragão Flamejante");
+                System.out.println("9 - Lâmina Mortal");
                 vida();
                 opção_porta1 = input.nextInt();
                 //caminho da esquerda
@@ -235,7 +235,12 @@ public class ProjetoGrupo9 {
                         if (opção_porta1 == 1) {
 
                             System.out.println("\n" + vetor[0]);
-                            System.out.println("");
+                            System.out.println(" ");
+                            System.out.println("Ao te atacar você conseguiu bloquear o ataque do demônio com o escudo do paladino");
+                            System.out.println("contra tacando com sua espada você, furo o seu coração matando o infame Demônio.");
+                            System.out.println("Parabéns, você conseguiu!!!!");
+                            System.out.println("Derem pente aparecer o espírito do paladino na sua frente sorrindo e agradecendo");
+                            System.out.println("pela sua vingança...");
 
                         }
                         break;
@@ -264,7 +269,8 @@ public class ProjetoGrupo9 {
                             System.out.println("\n" + vetor[1]);
                             vidas = vidas - 1;
                             gameOver();
-                            System.out.println("");
+                            System.out.println("infelizmente seu escudo nao suportou o ataque.");
+                            System.out.println("GAMEOVER");
                             break;
                         }
                     case 5:
@@ -404,90 +410,70 @@ public class ProjetoGrupo9 {
             System.out.println("1- Guerreiro\n2- Sacerdote\n3- Mestre de Escudo\n");
             escolha = input.nextInt();
             switch (escolha) {
-                case 1
-                    ->
-                     {
-                        System.out.println("\nO Guerreiro...");
-                        System.out.println("É um ponto de equilibrio entre força e defesa,\n naturalmente mais resistente e móvel,\n o guerreiro tem como base o ímpeto pela batalha e a coragem,\n mas inteligência não é seu ponto forte, portanto não pode utilizar magias.");
-                        do {
-                            System.out.println("\nVocê deseja ser O Guerreiro?\n1- Sim\n2- Não\n");
-                            escolha = input.nextInt();
+                case 1 -> {
+                    System.out.println("\nO Guerreiro...");
+                    System.out.println("É um ponto de equilibrio entre força e defesa,\n naturalmente mais resistente e móvel,\n o guerreiro tem como base o ímpeto pela batalha e a coragem,\n mas inteligência não é seu ponto forte, portanto não pode utilizar magias.");
+                    do {
+                        System.out.println("\nVocê deseja ser O Guerreiro?\n1- Sim\n2- Não\n");
+                        escolha = input.nextInt();
 
-                            switch (escolha) {
+                        switch (escolha) {
 
-                                case 1
-                                    ->
-                                    persona = "Agora voce é um guerreiro";
-                                case 2
-                                    ->
-                                    escolha = 4;
-                                default
-                                    ->
-                                     {
-                                        System.out.println("\nResposta inválida, tente novamente!");
-                                        escolha = 0;
-                                    }
+                            case 1 ->
+                                persona = "Agora voce é um guerreiro";
+                            case 2 ->
+                                escolha = 4;
+                            default -> {
+                                System.out.println("\nResposta inválida, tente novamente!");
+                                escolha = 0;
                             }
-                        } while (escolha == 0);
-                    }
-                case 2
-                    ->
-                     {
-                        System.out.println("\nO Sacerdote...");
-                        System.out.println("O sacerdote nasceu do conhecimento e sabedoria,\n é extremamente habilidoso com a arte das magias e tem poderes curativos,\n tem alto poder de dano mas é vulnerável.\n OBS: Possui mana");
-                        do {
-                            System.out.println("\nVocê deseja ser O Sacerdote?\n1- Sim\n2- Não\n");
-                            escolha = input.nextInt();
+                        }
+                    } while (escolha == 0);
+                }
+                case 2 -> {
+                    System.out.println("\nO Sacerdote...");
+                    System.out.println("O sacerdote nasceu do conhecimento e sabedoria,\n é extremamente habilidoso com a arte das magias e tem poderes curativos,\n tem alto poder de dano mas é vulnerável.\n OBS: Possui mana");
+                    do {
+                        System.out.println("\nVocê deseja ser O Sacerdote?\n1- Sim\n2- Não\n");
+                        escolha = input.nextInt();
 
-                            switch (escolha) {
-                                case 2
-                                    ->
-                                    escolha = 4;
-                                case 1
-                                    ->
-                                    persona = "Agora voce é um sacerdote";
-                                default
-                                    ->
-                                     {
-                                        System.out.println("\nResposta inválida, tente novamente!");
-                                        escolha = 0;
+                        switch (escolha) {
+                            case 2 ->
+                                escolha = 4;
+                            case 1 ->
+                                persona = "Agora voce é um sacerdote";
+                            default -> {
+                                System.out.println("\nResposta inválida, tente novamente!");
+                                escolha = 0;
 
-                                    }
                             }
-                        } while (escolha == 0);
-                    }
-                case 3
-                    ->
-                     {
-                        System.out.println("\nO Mestre de escudo...");
-                        System.out.println("É um subgênero da classe de guerreiro, trata-se de um herói que dedicou sua vida treinando a arte da evasão, defesa e provocação,\n para atuar nas linhas de frente das batalhas, sua arma é um grande escudo, ou escudo médio e maça,\n pode aguentar grandes quantidades de dano, mas devido sua especialização, não consegue causar grandes quantidades de dano.");
-                        do {
-                            System.out.println("\nVocê deseja ser O Mestre de escudo?\n1- Sim\n2- Não\n");
-                            escolha = input.nextInt();
+                        }
+                    } while (escolha == 0);
+                }
+                case 3 -> {
+                    System.out.println("\nO Mestre de escudo...");
+                    System.out.println("É um subgênero da classe de guerreiro, trata-se de um herói que dedicou sua vida treinando a arte da evasão, defesa e provocação,\n para atuar nas linhas de frente das batalhas, sua arma é um grande escudo, ou escudo médio e maça,\n pode aguentar grandes quantidades de dano, mas devido sua especialização, não consegue causar grandes quantidades de dano.");
+                    do {
+                        System.out.println("\nVocê deseja ser O Mestre de escudo?\n1- Sim\n2- Não\n");
+                        escolha = input.nextInt();
 
-                            switch (escolha) {
-                                case 2
-                                    ->
-                                    escolha = 4;
-                                case 1
-                                    ->
-                                    persona = "Agora voce é um mestre de escudo";
+                        switch (escolha) {
+                            case 2 ->
+                                escolha = 4;
+                            case 1 ->
+                                persona = "Agora voce é um mestre de escudo";
 
-                                default
-                                    ->
-                                     {
-                                        System.out.println("\nResposta inválida, tente novamente!");
-                                        escolha = 0;
-                                    }
+                            default -> {
+                                System.out.println("\nResposta inválida, tente novamente!");
+                                escolha = 0;
                             }
-                        } while (escolha == 0);
-                    }
-                default
-                    ->
-                     {
-                        System.out.println("\nResposta inválida, tente novamente!");
-                        escolha = 4;
-                    }
+                        }
+                    } while (escolha == 0);
+                }
+                default -> {
+                    System.out.println("\nResposta inválida, tente novamente!");
+                    escolha = 4;
+                }
             }
         } while (escolha == 4);
     }
