@@ -307,11 +307,12 @@ public class ProjetoGrupo9 {
                         }
                     default:
                         System.out.println("\nResposta inválida, tente novamente!");
-                }
+                
                 //heron
                 //italo
             } while (true);
         } while (true);
+    }while(true);
 
     }
 
